@@ -35,7 +35,11 @@ namespace PropertyOrFieldInfo
       /// <summary>Gets a <see cref="T:System.Reflection.MemberTypes"></see> value indicating the type of the member — method, constructor, event, and so on.</summary>
       /// <returns>A <see cref="T:System.Reflection.MemberTypes"></see> value indicating the type of member.</returns>
       public override MemberTypes MemberType => MemberInfo.MemberType;
+      /// <summary>Gets the name of the current member.</summary>
+      /// <returns>A <see cref="T:System.String"></see> containing the name of this member.</returns>
       public override string Name => MemberInfo.Name;
+      /// <summary>Gets the class object that was used to obtain this instance of MemberInfo.</summary>
+      /// <returns>The Type object through which this MemberInfo object was obtained.</returns>
       public override Type ReflectedType => MemberInfo.ReflectedType;
    }
 }
