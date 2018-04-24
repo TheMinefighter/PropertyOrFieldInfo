@@ -6,14 +6,20 @@
             You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and use all methods you know from Field and Property Infos. Explicit operators are included; IEquatables implemented.
         </Description>
         <PackageLicenseUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo/blob/master/LICENSE.md</PackageLicenseUrl>
-        <PackageReleaseNotes>This is a beta (without any known issues)</PackageReleaseNotes>
-        <AssemblyVersion>0.0.0.5</AssemblyVersion>
-        <FileVersion>0.0.0.5</FileVersion>
-        <Version>0.0.5</Version>
+        <PackageReleaseNotes>XML Doc Should be working now, some minor fixes
+            This is a beta (without any known issues)
+        </PackageReleaseNotes>
+        <AssemblyVersion>0.1.1.0</AssemblyVersion>
+        <FileVersion>0.1.1.0</FileVersion>
+        <Version>0.1.1</Version>
         <PackageId>PropertyOrFieldInfo</PackageId>
         <TargetFrameworks>netcoreapp2.0;netstandard2.0</TargetFrameworks>
         <LangVersion>7.2</LangVersion>
         <RepositoryUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo</RepositoryUrl>
         <PackageTags>Reflection FieldInfo PropertyInfo Core</PackageTags>
+        <RepositoryType>GitHub</RepositoryType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.0|AnyCPU'">
+        <DocumentationFile>bin\Release\netcoreapp2.0\PropertyOrFieldInfo.xml</DocumentationFile>
     </PropertyGroup>
 </Project>

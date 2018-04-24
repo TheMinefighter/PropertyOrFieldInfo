@@ -11,10 +11,11 @@ namespace PropertyOrFieldInfo {
 			MemberInfo = source;
 			//IsField is false by default
 		}
+      /// <inheritdoc />
       /// <summary>
-      /// Creates a new <see cref="PropertyOrFieldInfo"/> from a <see cref="FieldInfo"/>
+      /// Creates a new <see cref="T:PropertyOrFieldInfo.PropertyOrFieldInfo" /> from a <see cref="T:System.Reflection.FieldInfo" />
       /// </summary>
-      /// <param name="source">The <see cref="FieldInfo"/> to use</param>
+      /// <param name="source">The <see cref="T:System.Reflection.FieldInfo" /> to use</param>
 		public PropertyOrFieldInfo(FieldInfo source) {
 			MemberInfo = source;
 			IsField = true;
