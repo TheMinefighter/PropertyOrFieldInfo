@@ -21,8 +21,8 @@ namespace PropertyOrFieldInfo {
 				case MemberTypes.Property:
 					//IsField is false by default
 					break;
-				default: throw new ArgumentException("Not a PropertyInfo neither a Fieldinfo");
-			}
+				default: throw new ArgumentException("Not a PropertyInfo neither a FieldInfo");
+			} 	
 
 			MemberInfo = src;
 		}
@@ -41,7 +41,7 @@ namespace PropertyOrFieldInfo {
 				return (FieldInfo) src.MemberInfo;
 			}
 			else {
-				throw new InvalidOperationException("It´s a PropertyInfo not a Fieldinfo");
+				throw new InvalidOperationException("It´s a PropertyInfo not a FieldInfo");
 			}
 		}
 
