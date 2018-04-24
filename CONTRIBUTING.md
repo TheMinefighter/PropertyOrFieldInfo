@@ -23,4 +23,4 @@ you provide is on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND
 INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS
 FOR A PARTICULAR PURPOSE.
 
-This Agreement is based upon <a href="https://github.com/JamesNK/Newtonsoft.Json/blob/master/CONTRIBUTING.md">this Agreement</a>  published by James Newton-King under MIT License
+This Agreement is based upon <a href="https://github.com/JamesNK/Newtonsoft.Json/blob/master/CONTRIBUTING.md">an Agreement</a>  published by James Newton-King under MIT License.
