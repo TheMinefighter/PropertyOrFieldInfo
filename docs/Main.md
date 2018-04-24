@@ -1,2 +1,1 @@
-Attribution:
-Parts of https://github.com/dotnet/dotnet-api-docs/blob/master/xml/System.Reflection/MemberInfo.xml licensed by the Microsoft Corporation under MIT License (https://github.com/dotnet/dotnet-api-docs/blob/master/LICENSE-CODE) were used in this project
+<p style="color: #5e9ca0;"><span style="color: #000000;">Attribution: Parts of&nbsp;https://github.com/dotnet/dotnet-api-docs/blob/master/xml/System.Reflection/MemberInfo.xml&nbsp;licensed by the Microsoft Corporation under MIT License (https://github.com/dotnet/dotnet-api-docs/blob/master/LICENSE-CODE) were used in this project</span></p>
