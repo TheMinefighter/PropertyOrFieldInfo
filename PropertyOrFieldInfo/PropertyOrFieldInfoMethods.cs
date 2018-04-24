@@ -3,6 +3,9 @@ using System.Reflection;
 
 namespace PropertyOrFieldInfo {
 	public partial class PropertyOrFieldInfo {
+      /// <summary>
+      /// 
+      /// </summary>
 		public bool CanRead {
 			get {
 				if (IsField) {
@@ -12,8 +15,9 @@ namespace PropertyOrFieldInfo {
 					if (!((PropertyInfo) MemberInfo).CanRead) {
 						return false;
 					}
-					else {
-						return ((PropertyInfo) MemberInfo).GetGetMethod().IsPublic;
+					else
+					{
+					   return ((PropertyInfo) MemberInfo).GetGetMethod() != null;
 					}
 				}
 			}
@@ -29,18 +33,20 @@ namespace PropertyOrFieldInfo {
 						return false;
 					}
 					else {
-						return ((PropertyInfo) MemberInfo).GetSetMethod().IsPublic;
+						return ((PropertyInfo) MemberInfo).GetSetMethod() != null;
 					}
 				}
 			}
 		}
 
-		public Type GetType() {
-			if (IsField) {
-				return ((FieldInfo) MemberInfo).GetType();
+		public Type GetValueType() {
+			if (IsField)
+			{
+			   return ((FieldInfo) MemberInfo).FieldType;
 			}
-			else {
-				return ((PropertyInfo) MemberInfo).GetType();
+			else
+			{
+			   return ((PropertyInfo) MemberInfo).PropertyType;
 			}
 		}
 
