@@ -3,16 +3,16 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Copyright>(c) 2018 by Tobias Brohl</Copyright>
         <Description>Provides a unified interface for Property and FieldInfos.
-            You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and use all methods you know from Field and Property Infos. Implicit operators are included.
-            (GitHub repo will be there in the near future)
-        </Description>
-        <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
-        <PackageReleaseNotes>This is a beta (which has no known issues)</PackageReleaseNotes>
-        <AssemblyVersion>0.0.0.2</AssemblyVersion>
-        <FileVersion>0.0.0.2</FileVersion>
-        <Version>0.0.2</Version>
+You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and use all methods you know from Field and Property Infos. Explicit operators are included; IEquatables implemented.</Description>
+        <PackageLicenseUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo/blob/master/LICENSE.md</PackageLicenseUrl>
+        <PackageReleaseNotes>This is a beta (without any known issues)</PackageReleaseNotes>
+        <AssemblyVersion>0.0.0.5</AssemblyVersion>
+        <FileVersion>0.0.0.5</FileVersion>
+        <Version>0.0.5</Version>
         <PackageId>PropertyOrFieldInfo</PackageId>
         <TargetFrameworks>netcoreapp2.0;netstandard2.0</TargetFrameworks>
         <LangVersion>7.2</LangVersion>
+        <RepositoryUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo</RepositoryUrl>
+        <PackageTags>Reflection FieldInfo PropertyInfo Core</PackageTags>
     </PropertyGroup>
 </Project>
