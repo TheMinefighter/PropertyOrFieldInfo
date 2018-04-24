@@ -3,7 +3,8 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <Copyright>(c) 2018 by Tobias Brohl</Copyright>
         <Description>Provides a unified interface for Property and FieldInfos.
-You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and use all methods you know from Field and Property Infos. Explicit operators are included; IEquatables implemented.</Description>
+            You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and use all methods you know from Field and Property Infos. Explicit operators are included; IEquatables implemented.
+        </Description>
         <PackageLicenseUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo/blob/master/LICENSE.md</PackageLicenseUrl>
         <PackageReleaseNotes>This is a beta (without any known issues)</PackageReleaseNotes>
         <AssemblyVersion>0.0.0.5</AssemblyVersion>
