@@ -4,10 +4,13 @@ using System.Reflection;
 namespace PropertyOrFieldInfoPackage {
 	public partial class PropertyOrFieldInfo : MemberInfo, IEquatable<PropertyOrFieldInfo>, IEquatable<PropertyInfo>, IEquatable<FieldInfo> {
 	   /// <summary>
-	   ///  True if it is a <see cref="FieldInfo" />, false if it is a <see cref="PropertyInfo" />
+	   ///  True if it is a <see cref="FieldInfo" />, otherwise false
 	   /// </summary>
 	   public bool IsField { get; }
-
+		/// <summary>
+		///  True if it is a <see cref="PropertyInfo" />, otherwise false
+		/// </summary>
+		public bool IsProperty => !IsField;
 	   /// <summary>
 	   ///  The actual <see cref="System.Reflection.MemberInfo" />
 	   /// </summary>
@@ -35,17 +38,16 @@ namespace PropertyOrFieldInfoPackage {
 
 	   /// <inheritdoc />
 	   /// <summary>
-	   ///  Tesst whether two <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" />s are Equal
+	   ///  Test whether two <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" />s are Equal
 	   /// </summary>
 	   /// <param name="other">The <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> to compare with</param>
 	   /// <returns>Whether both are equal</returns>
-	   [Obsolete("Use "+nameof(EqualsMemberInfo)+" instead.")]
 	   public bool Equals(PropertyOrFieldInfo other) => MemberInfo.Equals(other.MemberInfo);
 		/// <summary>
-		///  Tesst whether two <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" />s are Equal
+		///  Test whether two <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" />s are Equal
 		/// </summary>
 		/// <param name="other">The <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> to compare with</param>
 		/// <returns>Whether both are equal</returns>
-		public bool EqualsMemberInfo(PropertyOrFieldInfo other) => MemberInfo.Equals(other.MemberInfo);
+		public bool EqualsMemberInfo(MemberInfo other) => MemberInfo.Equals(other);
 	}
 }

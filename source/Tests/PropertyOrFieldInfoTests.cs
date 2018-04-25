@@ -9,22 +9,18 @@ namespace Tests {
 		public PropertyOrFieldInfoTests() {
 			TypeInfo typeInfo = typeof(TestClass).GetTypeInfo();
 			FieldsAndProperties = typeInfo.DeclaredPropertiesAndFields();
-			FieldTest = typeInfo.DeclaredFields.ElementAt(0);
-			PropTest = typeInfo.DeclaredProperties.ElementAt(0);
+			FieldTest = typeInfo.DeclaredFields.ElementAt(1);//0 is backing field
+			PropTest = typeInfo.DeclaredProperties.ElementAt(0); 
 		}
 
 		public IEnumerable<PropertyOrFieldInfo> FieldsAndProperties;
 		public FieldInfo FieldTest;
 		public PropertyInfo PropTest;
 
-		public void MemberSpecificEqualityTest() {
-			Assert.True(FieldsAndProperties.Any(x => x.Equals(PropTest as MemberInfo)));
-			Assert.True(FieldsAndProperties.Any(x => x.Equals(FieldTest)));
-		}
 
 		private class TestClass {
-			public int Field1;
 			public string Prop1 { get; set; }
+			public int Field1;
 		}
 
 		[Fact]
@@ -42,6 +38,12 @@ namespace Tests {
 		public void SpecificEqualityTest() {
 			Assert.True(FieldsAndProperties.Any(x => x.Equals(PropTest)));
 			Assert.True(FieldsAndProperties.Any(x => x.Equals(FieldTest)));
+		}
+
+		[Fact]
+		public void MemberSpecificEqualityTest() {
+			Assert.True(FieldsAndProperties.Any(x => x.EqualsMemberInfo(PropTest)));
+			Assert.True(FieldsAndProperties.Any(x => x.EqualsMemberInfo(FieldTest)));
 		}
 	}
 }

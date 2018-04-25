@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace PropertyOrFieldInfoPackage {
 	public partial class PropertyOrFieldInfo {
@@ -78,6 +79,19 @@ namespace PropertyOrFieldInfoPackage {
 			}
 			else {
 				((PropertyInfo) MemberInfo).SetValue(target, value);
+			}
+		}
+
+		public bool IsStatic() {
+			if (IsField) {
+				return ((FieldInfo) MemberInfo).IsStatic;
+			}
+			else {
+				MethodInfo[] accessors = ((PropertyInfo) MemberInfo).GetAccessors(true);
+				if (accessors.Length==0) {
+					throw new InvalidOperationException("The property has no accessor");
+				}
+				return accessors[0].IsStatic;
 			}
 		}
 	}
