@@ -42,7 +42,14 @@ namespace PropertyOrFieldInfoPackage {
 		///  Gets the Datatype stored  inside the Field or Property
 		/// </summary>
 		/// <returns> The <see cref="Type" /> stored inside the field or property</returns>
-		public Type GetValueType {
+		[Obsolete("Use "+ nameof(ValueType)+ " instead")]
+		public Type GetValueType => ValueType;
+		
+		/// <summary>
+		///  Gets the Datatype stored  inside the Field or Property
+		/// </summary>
+		/// <returns> The <see cref="Type" /> stored inside the field or property</returns>
+		public Type ValueType {
 			get {
 				if (IsField) {
 					return ((FieldInfo) MemberInfo).FieldType;
@@ -52,7 +59,6 @@ namespace PropertyOrFieldInfoPackage {
 				}
 			}
 		}
-
 		/// <summary>
 		///  Reads the value of a field or property of a certain object or statics
 		/// </summary>
