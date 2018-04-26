@@ -85,5 +85,7 @@ namespace PropertyOrFieldInfoPackage {
 		/// </summary>
 		/// <param name="source">The <see cref="PropertyInfo" /> to convert</param>
 		public static explicit operator PropertyOrFieldInfo(PropertyInfo source) => new PropertyOrFieldInfo(source);
+
+//		public static explicit operator PropertyOrFieldInfo(RuntimePropertyInfo source) => null;
 	}
 }

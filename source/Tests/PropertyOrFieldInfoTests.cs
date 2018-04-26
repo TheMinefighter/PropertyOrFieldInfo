@@ -10,9 +10,9 @@ namespace Tests {
 		public PropertyOrFieldInfoTests() {
 			TypeInfo typeInfo = typeof(TestClass).GetTypeInfo();
 			FieldsAndProperties = typeInfo.DeclaredPropertiesAndFields();
-			FieldTest = typeInfo.DeclaredFields.ElementAt(1);//0 is backing field
-			PropTest = typeInfo.DeclaredProperties.ElementAt(0); 
-			TestObject=new TestClass();
+			FieldTest = typeInfo.DeclaredFields.ElementAt(1); //0 is backing field
+			PropTest = typeInfo.DeclaredProperties.ElementAt(0);
+			TestObject = new TestClass();
 		}
 
 		public IEnumerable<PropertyOrFieldInfo> FieldsAndProperties;
@@ -24,8 +24,6 @@ namespace Tests {
 		public class TestClass {
 			public string Prop1 { get; set; }
 			public int Field1;
-			
-			
 		}
 
 		[Fact]
@@ -50,32 +48,57 @@ namespace Tests {
 			Assert.True(FieldsAndProperties.Any(x => x.EqualsMemberInfo(PropTest)));
 			Assert.True(FieldsAndProperties.Any(x => x.EqualsMemberInfo(FieldTest)));
 		}
+
 		[Fact]
 		public void NameMethod() {
-			Assert.True(FieldsAndProperties.Select(x=>x.Name).Contains(nameof(TestClass.Prop1)));
-			Assert.True(FieldsAndProperties.Select(x=>x.Name).Contains(nameof(TestClass.Field1)));
+			Assert.True(FieldsAndProperties.Select(x => x.Name).Contains(nameof(TestClass.Prop1)));
+			Assert.True(FieldsAndProperties.Select(x => x.Name).Contains(nameof(TestClass.Field1)));
 		}
+
 		[Fact]
 		public void SetMethod() {
-			((PropertyOrFieldInfo) FieldTest).SetValue(TestObject,10);
-			((PropertyOrFieldInfo) PropTest).SetValue(TestObject,"ThisIsATest");
-			Assert.True(TestObject.Field1==10);
-			Assert.True(TestObject.Prop1=="ThisIsATest");
+			((PropertyOrFieldInfo) FieldTest).SetValue(TestObject, 10);
+			((PropertyOrFieldInfo) PropTest).SetValue(TestObject, "ThisIsATest");
+			Assert.True(TestObject.Field1 == 10);
+			Assert.True(TestObject.Prop1 == "ThisIsATest");
 		}
+
 		[Fact]
 		public void GetMethod() {
 			TestObject.Field1 = 11;
 			TestObject.Prop1 = "ThisIsAnotherTest";
 
-			Assert.True((int) ((PropertyOrFieldInfo) FieldTest).GetValue(TestObject)==11);
-			Assert.True((string) ((PropertyOrFieldInfo) PropTest).GetValue(TestObject)=="ThisIsAnotherTest");
+			Assert.True((int) ((PropertyOrFieldInfo) FieldTest).GetValue(TestObject) == 11);
+			Assert.True((string) ((PropertyOrFieldInfo) PropTest).GetValue(TestObject) == "ThisIsAnotherTest");
 		}
 
 		[Fact]
 		public void ValueType() {
-			Assert.True(((PropertyOrFieldInfo) FieldTest).ValueType==typeof(int));
-			Assert.True(((PropertyOrFieldInfo) PropTest).ValueType==typeof(string));
+			Assert.True(((PropertyOrFieldInfo) FieldTest).ValueType == typeof(int));
+			Assert.True(((PropertyOrFieldInfo) PropTest).ValueType == typeof(string));
 		}
+
+		[Fact]
+		public void Conversions() {
+			Assert.True(((PropertyInfo) (PropertyOrFieldInfo) PropTest).Equals(PropTest));
+			Assert.True(((FieldInfo) (PropertyOrFieldInfo) FieldTest).Equals(FieldTest));
+		}
+
+		[Fact]
+		public void Constructors() {
+			MemberInfo propertyInfo = PropTest;
+			MemberInfo fieldInfo = FieldTest;
+
+			Assert.True(new PropertyOrFieldInfo(propertyInfo).Equals(PropTest));
+			Assert.True(new PropertyOrFieldInfo(fieldInfo).Equals(FieldTest));
+		}
+
+		[Fact]
+		public void SpecificConstructors() {
+			Assert.True(new PropertyOrFieldInfo(PropTest).Equals(PropTest));
+			Assert.True(new PropertyOrFieldInfo(FieldTest).Equals(FieldTest));
+		}
+		
 		
 	}
 }
