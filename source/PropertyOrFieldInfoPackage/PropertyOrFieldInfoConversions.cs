@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Reflection;
-using System.Reflection.Metadata;
 
 namespace PropertyOrFieldInfoPackage {
 	public partial class PropertyOrFieldInfo {
