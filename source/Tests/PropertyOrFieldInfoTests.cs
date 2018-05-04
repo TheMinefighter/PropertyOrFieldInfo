@@ -10,16 +10,20 @@ namespace Tests {
 	public class PropertyOrFieldInfoTests {
 		public PropertyOrFieldInfoTests() {
 			TypeInfo typeInfo = typeof(TestClass).GetTypeInfo();
-			FieldsAndProperties = typeInfo.DeclaredPropertiesAndFields();
+			FieldsAndProperties = typeInfo.DeclaredPropertiesAndFields().ToArray();
 			FieldTest = typeInfo.DeclaredFields.Where(x=>!x.IsDefined(typeof(CompilerGeneratedAttribute))).ElementAt(0); //0 is backing field
 			PropTest = typeInfo.DeclaredProperties.ElementAt(0);
 			TestObject = new TestClass();
+			p = (PropertyOrFieldInfo) PropTest;
+			f = (PropertyOrFieldInfo) FieldTest;
 		}
 
-		public IEnumerable<PropertyOrFieldInfo> FieldsAndProperties;
+		public PropertyOrFieldInfo[] FieldsAndProperties;
 		public FieldInfo FieldTest;
 		public PropertyInfo PropTest;
 		public TestClass TestObject;
+		public PropertyOrFieldInfo f;
+		public PropertyOrFieldInfo p;
 
 
 		public class TestClass {
@@ -35,11 +39,22 @@ namespace Tests {
 			Assert.True(new PropertyOrFieldInfo(propertyInfo).Equals(PropTest));
 			Assert.True(new PropertyOrFieldInfo(fieldInfo).Equals(FieldTest));
 		}
+		[Fact]
+		public void Conversions1() {
+			Assert.True(p.Equals(PropTest));
+			Assert.True(f.Equals(FieldTest));
+		}
 
 		[Fact]
-		public void Conversions() {
-			Assert.True(((PropertyInfo) (PropertyOrFieldInfo) PropTest).Equals(PropTest));
-			Assert.True(((FieldInfo) (PropertyOrFieldInfo) FieldTest).Equals(FieldTest));
+		public void Conversions2() {
+			Assert.True(((FieldInfo) f).Equals(FieldTest));
+			Assert.True(((PropertyInfo) p).Equals(PropTest));
+		}
+		
+		[Fact]
+		public void Conversions3() {
+			Assert.True(((FieldInfo) FieldsAndProperties[1]).Equals(FieldTest));
+			Assert.True(((PropertyInfo) FieldsAndProperties[0]).Equals(PropTest));
 		}
 
 		[Fact]
