@@ -5,7 +5,7 @@ to print all names of Fields and Properties of TestType use:
     	Console.WriteLine(info.Name);
     }
 
-For further information about using features of this package visit [this](./CodingDoc.html).+
+For further information about using features of this package visit [this](./CodingDoc.html).
 # License
 This project has been published by Tobias Brohl under [MIT License](https://raw.githubusercontent.com/TheMinefighter/PropertyOrFieldInfo/master/LICENSE.md)
 # Bug Reports
