@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 
 namespace PropertyOrFieldInfoPackage {
 	public partial class PropertyOrFieldInfo {
@@ -42,9 +41,9 @@ namespace PropertyOrFieldInfoPackage {
 		///  Gets the Datatype stored  inside the Field or Property
 		/// </summary>
 		/// <returns> The <see cref="Type" /> stored inside the field or property</returns>
-		[Obsolete("Use "+ nameof(ValueType)+ " instead")]
+		[Obsolete("Use " + nameof(ValueType) + " instead")]
 		public Type GetValueType => ValueType;
-		
+
 		/// <summary>
 		///  Gets the Datatype stored  inside the Field or Property
 		/// </summary>
@@ -59,6 +58,7 @@ namespace PropertyOrFieldInfoPackage {
 				}
 			}
 		}
+
 		/// <summary>
 		///  Reads the value of a field or property of a certain object or statics
 		/// </summary>
@@ -94,9 +94,10 @@ namespace PropertyOrFieldInfoPackage {
 			}
 			else {
 				MethodInfo[] accessors = ((PropertyInfo) MemberInfo).GetAccessors(true);
-				if (accessors.Length==0) {
+				if (accessors.Length == 0) {
 					throw new InvalidOperationException("The property has no accessor");
 				}
+
 				return accessors[0].IsStatic;
 			}
 		}

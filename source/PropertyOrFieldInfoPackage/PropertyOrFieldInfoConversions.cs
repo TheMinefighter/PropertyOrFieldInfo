@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using System.Reflection.Metadata;
 
 namespace PropertyOrFieldInfoPackage {
 	public partial class PropertyOrFieldInfo {
@@ -14,6 +15,7 @@ namespace PropertyOrFieldInfoPackage {
 		///  Creates a new <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> from a <see cref="T:System.Reflection.FieldInfo" />
 		/// </summary>
 		/// <param name="source">The <see cref="T:System.Reflection.FieldInfo" /> to use</param>
+		/// 
 		public PropertyOrFieldInfo(FieldInfo source) {
 			MemberInfo = source;
 			IsField = true;
@@ -78,12 +80,14 @@ namespace PropertyOrFieldInfoPackage {
 		///  Convertes a <see cref="FieldInfo" /> to a <see cref="PropertyOrFieldInfoPackage.PropertyOrFieldInfo" />
 		/// </summary>
 		/// <param name="source">The <see cref="FieldInfo" /> to convert</param>
+		[Obsolete("Use a new Expression instead, forbidden by C#", true)]
 		public static explicit operator PropertyOrFieldInfo(FieldInfo source) => new PropertyOrFieldInfo(source);
 
 		/// <summary>
 		///  Convertes a <see cref="PropertyInfo" /> to a <see cref="PropertyOrFieldInfoPackage.PropertyOrFieldInfo" />
 		/// </summary>
 		/// <param name="source">The <see cref="PropertyInfo" /> to convert</param>
+		[Obsolete("Use a new Expression instead, forbidden by C#", true)]
 		public static explicit operator PropertyOrFieldInfo(PropertyInfo source) => new PropertyOrFieldInfo(source);
 
 //		public static explicit operator PropertyOrFieldInfo(RuntimePropertyInfo source) => null;
