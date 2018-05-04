@@ -28,5 +28,6 @@ If thats the case and it is static read it´s value
 		info.GetValue(
 		//For NonStatics insert the reference here
 		null));
+	}
 }
 ```
