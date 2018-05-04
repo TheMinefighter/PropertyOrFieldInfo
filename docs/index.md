@@ -7,7 +7,7 @@ to print all names of Fields and Properties of TestType use:
 
 For further information about using features of this package visit [this](./CodingDoc.html).
 # License
-This project has been published by Tobias Brohl under [MIT License](https://raw.githubusercontent.com/TheMinefighter/PropertyOrFieldInfo/master/LICENSE.md)
+This project has been published by Tobias Brohl under [MIT License](https://raw.githubusercontent.com/TheMinefighter/PropertyOrFieldInfo/master/LICENSE.md).
 # Bug Reports
 Please report any Bugs  [here](https://github.com/TheMinefighter/PropertyOrFieldInfo/issues), then I can fix them probably within 24h!
 # Attribution:
