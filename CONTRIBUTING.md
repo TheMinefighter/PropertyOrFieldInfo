@@ -1,5 +1,5 @@
 
-## <a name="cla"></a> Contributor License Agreement
+## Contributor License Agreement
 
 By contributing your code to PropertyOrFieldInfo you grant Tobias Brohl a non-exclusive, irrevocable, worldwide,
 royalty-free, sublicenseable, transferable license under all of Your relevant intellectual property rights
@@ -23,4 +23,4 @@ you provide is on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND
 INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS
 FOR A PARTICULAR PURPOSE.
 
-This Agreement is based upon <a href="https://github.com/JamesNK/Newtonsoft.Json/blob/master/CONTRIBUTING.md">an Agreement</a>  published by James Newton-King under MIT License.
+This Agreement is based upon https://github.com/JamesNK/Newtonsoft.Json/blob/master/CONTRIBUTING.md published by James Newton-King under MIT License.
