@@ -1,6 +1,6 @@
 # Attribution:
 ## Sorcecode
-The following attribution is for stiff
+The following attribution part is for stuff which is direcly contained in the sourcecode.
 ### dotnet/dotnet-api-docs
 Parts of the dotnet-api-docs to be specific [this file](https://github.com/dotnet/dotnet-api-docs/blob/master/xml/System.Reflection/MemberInfo.xml) published by the Microsoft Corporation under the following License ([MIT License](https://github.com/dotnet/dotnet-api-docs/blob/master/LICENSE-CODE)) were used in this project.
 
