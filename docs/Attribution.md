@@ -1,4 +1,4 @@
-# Attribution:
+# Attribution
 ## Sourcecode
 The following attribution section is for stuff which is direcly contained in the sourcecode and thereby redistributed with the package.
 ### dotnet/dotnet-api-docs
