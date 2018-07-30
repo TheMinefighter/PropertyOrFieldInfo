@@ -1,8 +1,8 @@
-# Attribution:
-## Sorcecode
+# Attribution
+## Sourcecode
 The following attribution section is for stuff which is direcly contained in the sourcecode and thereby redistributed with the package.
 ### dotnet/dotnet-api-docs
-Parts of the dotnet-api-docs to be specific [this file](https://github.com/dotnet/dotnet-api-docs/blob/master/xml/System.Reflection/MemberInfo.xml) published by the Microsoft Corporation under the following License ([MIT License](https://github.com/dotnet/dotnet-api-docs/blob/master/LICENSE-CODE)) were used in this project. License as below.
+Parts of the dotnet-api-docs to be specific [this file](https://github.com/dotnet/dotnet-api-docs/blob/master/xml/System.Reflection/MemberInfo.xml) published by the Microsoft Corporation under [MIT License](https://github.com/dotnet/dotnet-api-docs/blob/master/LICENSE-CODE) were used in this project. License as below.
 
 The MIT License (MIT)
 Copyright (c) Microsoft Corporation
@@ -25,7 +25,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ## Referenced Libraries
 The following attribution section is for libraries and other things which are referenced or used in some other way for this package but are NOT redistributed with the package.
 ### dotnet/corefx 
-Parts of the corefx library published by the  .NET Foundation and Contributors under the following License ([MIT License](https://github.com/dotnet/corefx/blob/master/LICENSE.TXT)) were used in this project. License as below.
+Parts of the corefx library published by the  .NET Foundation and Contributors under the [MIT License](https://github.com/dotnet/corefx/blob/master/LICENSE.TXT) were used in this project. License as below.
 
 The MIT License (MIT)
 
@@ -52,7 +52,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ### dotnet/core
-Parts of the core library published by the  .NET Foundation and Contributors under the following License ([MIT License](https://github.com/dotnet/corefx/blob/master/LICENSE.TXT)) were used in this project. License as below.
+Parts of the core library published by the  .NET Foundation and Contributors under the [MIT License](https://github.com/dotnet/corefx/blob/master/LICENSE.TXT) were used in this project. License as below.
 
 The MIT License (MIT)
 
@@ -79,7 +79,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ### dotnet/coreclr
-Parts of the coreclr library published by the  .NET Foundation and Contributors under the following License ([MIT License](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT)) were used in this project. License as below.
+Parts of the coreclr library published by the  .NET Foundation and Contributors under the ([MIT License](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT) were used in this project. License as below.
 
 The MIT License (MIT)
 
@@ -106,7 +106,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ### dotnet/cli
-The cli library published by the  .NET Foundation and Contributors under the following License ([MIT License](https://github.com/dotnet/cli/blob/master/LICENSE)) were used in this project. License as below.
+The cli library published by the  .NET Foundation and Contributors under the [MIT License](https://github.com/dotnet/cli/blob/master/LICENSE) were used in this project. License as below.
 
 The MIT License (MIT)
 
