@@ -32,14 +32,6 @@ namespace Tests {
 		}
 
 		[Fact]
-		public void Constructors() {
-			MemberInfo propertyInfo = PropTest;
-			MemberInfo fieldInfo = FieldTest;
-
-			Assert.True(new PropertyOrFieldInfo(propertyInfo).Equals(PropTest));
-			Assert.True(new PropertyOrFieldInfo(fieldInfo).Equals(FieldTest));
-		}
-		[Fact]
 		public void Conversions1() {
 			Assert.True(p.Equals(PropTest));
 			Assert.True(f.Equals(FieldTest));

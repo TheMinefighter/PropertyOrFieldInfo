@@ -3,10 +3,11 @@ using System.Reflection;
 
 namespace PropertyOrFieldInfoPackage {
 	public partial class PropertyOrFieldInfo {
+		/// <inheritdoc />
 		/// <summary>
-		///  Creates a new <see cref="PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> from a <see cref="PropertyInfo" />
+		///  Creates a new <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> from a <see cref="T:System.Reflection.PropertyInfo" />
 		/// </summary>
-		/// <param name="source">The <see cref="PropertyInfo" /> to use</param>
+		/// <param name="source">The <see cref="T:System.Reflection.PropertyInfo" /> to use</param>
 		public PropertyOrFieldInfo(PropertyInfo source) => MemberInfo = source;
 
 		/// <inheritdoc />
@@ -20,12 +21,13 @@ namespace PropertyOrFieldInfoPackage {
 			IsField = true;
 		}
 
+		/// <inheritdoc />
 		/// <summary>
-		///  Creates a new <see cref="PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> from a <see cref="System.Reflection.MemberInfo" />
+		///  Creates a new <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> from a <see cref="T:System.Reflection.MemberInfo" />
 		/// </summary>
 		/// <param name="source">The MemberInfo to use</param>
-		/// <exception cref="ArgumentException">
-		///  Thrown when the MemberInfo is not a <see cref="PropertyInfo" /> neither a <see cref="FieldInfo" />
+		/// <exception cref="T:System.ArgumentException">
+		///  Thrown when the MemberInfo is not a <see cref="T:System.Reflection.PropertyInfo" /> neither a <see cref="T:System.Reflection.FieldInfo" />
 		/// </exception>
 		public PropertyOrFieldInfo(MemberInfo source) {
 			switch (source.MemberType) {
