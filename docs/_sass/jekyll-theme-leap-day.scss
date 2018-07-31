@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, ul, ol, table, pre, dl {
   margin:0 0 20px;
-  background:#313335;
+ // background:#313335;
 }
 
 h1, h2, h3 {
@@ -223,11 +223,13 @@ header {
   box-shadow: 0px 1px 3px rgba(0,0,0,.25);
   border-radius: 0px 2px 2px 0px;
   padding-right: 10px;
-  margin-right: -532px;
+
+  margin-right:-382px;
   background: #348400;
   border: 1px solid #418c10;
   .button {
     background: linear-gradient(#3cb900, #33A321);
+//    background: linear-gradient(#3cb900, #33A321);
     border-radius: 2px;
     box-shadow: inset 0px 1px 0px rgba(255,255,255,.4), 0px 1px 1px rgba(0,0,0,.1);
     padding: 10px 12px;
@@ -238,27 +240,27 @@ header {
     font-weight: bold;
     display:inline-block;
     text-align:center;
-    border: 1px solid #378300;
-    background: #367d00;
-    position:fixed;
+  //  border: 1px solid #378300;
+  //  background: #367d00;
     left:50%;
-    margin-left: -475px;
+    margin-left: 5px;
     &:hover {
       background: linear-gradient(#28cd00, #36b723);
      // background-color: #ffeca0;
     }
   }
 
-  //.fork {
-  //  position:fixed;
-  //  left:50%;
-  //  padding: 10px 12px;
-  //  margin-top: 6px;
-  //  line-height:14px;
-  //  font-size:14px;
-  //  background-color: #5cbc1e;
-  //  margin-left: -475px;
-  //}
+  .fork {
+    position:fixed;
+    left:50%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    line-height:14px;
+    font-size:14px;
+   // background-color: #5cbc1e;
+    
+    margin-left:-325px;
+  }
 
   .downloads {
     float: right;
@@ -268,7 +270,7 @@ header {
       float:left;
       line-height:52px;
       font-size:90%;
-      color:#9d7f0d;
+      color: #000000;
       text-transform:uppercase;
       text-shadow:rgba(#fff, 0.2) 0 1px 0;
     }
@@ -284,9 +286,9 @@ header {
     li {
       display:inline;
 
-      a.button {
-        background: linear-gradient(#3cb900, #33A321);
-      }
+      //a.button {
+      //  background: linear-gradient(#3cb900, #33A321);
+      //}
     }
   }
 
@@ -659,4 +661,25 @@ footer {
     bottom:auto;
     width:auto;
   }
+}
+@media print, screen and (min-width: 1600px) {
+ section {
+   width: 1007px;
+ }
+  nav {
+    margin-left: -780px;
+  }
+  footer {
+    margin-left: -780px;
+  }
+  .wrapper {
+    width: 950px;
+  }
+  #banner {
+    margin-right: -532px;
+    .fork {
+      margin-left: -475px;
+    }
+  }
+  //A test
 }
