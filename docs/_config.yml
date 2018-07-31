@@ -1,1 +1,3 @@
-theme: jekyll-theme-slate
+theme: jekyll-theme-leap-day
+site.show_downloads: true
+site.owner_url: https://theminefighter.github.io/
