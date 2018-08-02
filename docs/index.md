@@ -13,6 +13,6 @@ This project has been published by Tobias Brohl under [MIT License](https://raw.
 ## Bug Reports
 Please report any Bugs  [here](https://github.com/TheMinefighter/PropertyOrFieldInfo/issues), then I can fix them probably within 24h!
 ## Attribution:
-You can find attribution for all libraries used [here](./Attribution.html).
+You can find attribution for all libraries used [here](./acknowledgements.html).
 ## Contribution
 Please review [this](https://raw.githubusercontent.com/TheMinefighter/PropertyOrFieldInfo/master/CONTRIBUTING.md) before contributing.

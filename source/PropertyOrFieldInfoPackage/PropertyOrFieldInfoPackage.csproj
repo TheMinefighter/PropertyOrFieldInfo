@@ -20,7 +20,7 @@ You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an 
         <PackageTags>Reflection FieldInfo PropertyInfo Core</PackageTags>
         <RepositoryType>GitHub</RepositoryType>
         <Authors>Tobias Brohl</Authors>
-        <Company/>
+        <Company />
         <PackageProjectUrl>https://theminefighter.github.io/PropertyOrFieldInfo/</PackageProjectUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
