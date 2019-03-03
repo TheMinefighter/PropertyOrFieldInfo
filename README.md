@@ -1,6 +1,6 @@
 # PropertyOrFieldInfo
 [![NuGet](https://img.shields.io/nuget/v/PropertyOrFieldInfo.svg)](https://nuget.org/packages/PropertyOrFieldInfo)
-[![License](https://img.shields.io/github/license/TheMinefighter/PropertyOrFieldInfo.svg)](https://github.com/TheMinefighter/PropertyOrFieldInfo/blob/master/LICENSE.txt)
+[![License](https://img.shields.io/github/license/TheMinefighter/PropertyOrFieldInfo.svg)](https://github.com/TheMinefighter/PropertyOrFieldInfo/blob/master/LICENSE)
 
 Provides a unified interface for Property and FieldInfos.
 You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos,
