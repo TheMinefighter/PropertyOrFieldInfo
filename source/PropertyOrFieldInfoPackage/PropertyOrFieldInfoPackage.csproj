@@ -10,12 +10,13 @@ You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an 
             For Legacy Support please replace "using PropertyOrFieldInfo;" with "using PropertyOrFieldInfoPackage;"
             This is a beta (without any known issues)
 </PackageReleaseNotes>
+       <DocumentationFile>docs.xml</DocumentationFile>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <FileVersion>1.0.0.0</FileVersion>
         <Version>1.0.0</Version>
         <PackageId>PropertyOrFieldInfo</PackageId>
-        <TargetFrameworks>netcoreapp2.0;netstandard2.0</TargetFrameworks>
-        <LangVersion>7.2</LangVersion>
+       <TargetFrameworks>net45;net451;net452;net46;net461;net462;net47;net471;net472;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
+       <LangVersion>8</LangVersion>
         <RepositoryUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo</RepositoryUrl>
         <PackageTags>Reflection FieldInfo PropertyInfo Core</PackageTags>
         <RepositoryType>GitHub</RepositoryType>
@@ -23,8 +24,12 @@ You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an 
         <Company />
         <PackageProjectUrl>https://theminefighter.github.io/PropertyOrFieldInfo/</PackageProjectUrl>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+       <NullableContextOptions>enable</NullableContextOptions>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.0|AnyCPU'">
         <DocumentationFile>bin\Release\netcoreapp2.0\PropertyOrFieldInfo.xml</DocumentationFile>
     </PropertyGroup>
+   <ItemGroup>
+      <PackageReference Include="JetBrains.Annotations" Version="2019.1.1"/>
+   </ItemGroup>
 </Project>
