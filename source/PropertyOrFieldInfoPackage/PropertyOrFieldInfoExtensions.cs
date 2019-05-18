@@ -33,14 +33,13 @@ public static class PropertyOrFieldInfoExtensions {
 	///  Loads all <see cref="PropertyOrFieldInfo" />s from a given <see cref="TypeInfo" />
 	/// </summary>
 	/// <param name="source">The TypeInfo to load the <see cref="PropertyOrFieldInfo" />s from</param>
-	/// <param name="flags">Flags to check for</param>
+	/// <param name="flags">Flags to check for, by default <code>Instance | Static | Public</code></param>
 	/// <returns>An <see cref="IEnumerable{PropertyOrFieldInfo}" /> containing all Properties and Fields of the Type</returns>
 	[PublicAPI]
-	public static IEnumerable<PropertyOrFieldInfo> GetPropertiesAndFields(this TypeInfo source, BindingFlags flags) {
-		return source.GetProperties(flags)
-			.Select(x => new PropertyOrFieldInfo(x))
-			.Concat(source.GetFields(flags)
-				.Select(x => new PropertyOrFieldInfo(x)));
+	public static PropertyOrFieldInfo[] GetPropertiesAndFields(this TypeInfo source,
+		BindingFlags flags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.Public) {
+		return source.GetProperties(flags).Select(x => new PropertyOrFieldInfo(x))
+			.Concat(source.GetFields(flags).Select(x => new PropertyOrFieldInfo(x))).ToArray();
 	}
 }
 }

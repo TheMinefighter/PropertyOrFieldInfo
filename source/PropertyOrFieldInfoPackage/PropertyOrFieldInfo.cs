@@ -54,5 +54,8 @@ public partial class PropertyOrFieldInfo : MemberInfo, IEquatable<PropertyOrFiel
 	/// <param name="other">The <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> to compare with</param>
 	/// <returns>Whether both are equal</returns>
 	public bool EqualsMemberInfo(MemberInfo other) => MemberInfo.Equals(other);
+
+	/// <inheritdoc />
+	public override string ToString() => MemberInfo.ToString();
 }
 }

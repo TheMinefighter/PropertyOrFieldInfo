@@ -9,7 +9,7 @@ namespace Tests {
 public class PropertyOrFieldInfoTests {
 	public PropertyOrFieldInfoTests() {
 		TypeInfo typeInfo = typeof(TestClass).GetTypeInfo();
-		FieldsAndProperties = typeInfo.DeclaredPropertiesAndFields().ToArray();
+		FieldsAndProperties = typeInfo.GetPropertiesAndFields();
 		FieldTest = typeInfo.DeclaredFields.Where(x => !x.IsDefined(typeof(CompilerGeneratedAttribute)))
 			.ElementAt(0); //0 is backing field
 		PropTest = typeInfo.DeclaredProperties.ElementAt(0);
