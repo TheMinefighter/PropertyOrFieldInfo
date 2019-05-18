@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyOrFieldInfoPackage", "PropertyOrFieldInfoPackage\PropertyOrFieldInfoPackage.csproj", "{7D106996-B809-4FFE-897E-38EDF4EE6E6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{CB07935F-6FC4-477C-82FA-100C5C143C6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unittests", "Unittests\Unittests.csproj", "{CB07935F-6FC4-477C-82FA-100C5C143C6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

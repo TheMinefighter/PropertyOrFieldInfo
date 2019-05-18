@@ -5,7 +5,7 @@ using JetBrains.Annotations;
 using PropertyOrFieldInfoPackage;
 using Xunit;
 
-namespace Tests {
+namespace Unittests {
 public class PropertyOrFieldInfoTests {
 	public PropertyOrFieldInfoTests() {
 		TypeInfo typeInfo = typeof(TestClass).GetTypeInfo();
