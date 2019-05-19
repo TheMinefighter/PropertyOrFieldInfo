@@ -2,7 +2,7 @@ Obtaining a IEnumerable<PropertyOrFieldInfo> from a given type:
 
 ```
 TypeInfo myTypeInfo=typeof(MyType).GetTypeInfo();
-IEnumerable<PropertyOrFieldInfo> PropertiesAndFields=myTypeInfo.DeclaredPropertiesAndFields();
+IEnumerable<PropertyOrFieldInfo> PropertiesAndFields=myTypeInfo.GetPropertiesAndFields();
 ```
 
 Now you can Iterate through that IEnumerable:
@@ -21,7 +21,7 @@ Test if it´s readable:
 if (info.CanRead) {
 	Console.WriteLine("I can read this!");
 ```
-If thats the case and it is static read it´s value
+If that's the case and it is static read it´s value
 ```
 	if (info.IsStatic) {
 		Console.WriteLine("It is static and it´s value is "+ 
@@ -31,3 +31,5 @@ If thats the case and it is static read it´s value
 	}
 }
 ```
+
+Furthermore there are the `TypeInfo.GetRuntimePropertiesAndFields` and `TypeInfo.DeclaredPropertiesAndFields` based on the corresponding standard properties/methods.
