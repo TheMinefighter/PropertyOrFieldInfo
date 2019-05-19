@@ -1,35 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-        <Copyright>(c) 2018 by Tobias Brohl</Copyright>
-        <Description>Provides a unified interface for Property and FieldInfos.
-You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and use all methods you know from Field and Property Infos. Explicit operators are included; IEquatables implemented.
-</Description>
-        <PackageLicenseUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo/blob/master/LICENSE.md</PackageLicenseUrl>
-        <PackageReleaseNotes>Fixes, End of beta.
-            For Legacy Support please replace "using PropertyOrFieldInfo;" with "using PropertyOrFieldInfoPackage;"
-            This is a beta (without any known issues)
-</PackageReleaseNotes>
-       <DocumentationFile>docs.xml</DocumentationFile>
-        <AssemblyVersion>1.0.0.0</AssemblyVersion>
-        <FileVersion>1.0.0.0</FileVersion>
-        <Version>1.0.0</Version>
-        <PackageId>PropertyOrFieldInfo</PackageId>
-       <TargetFrameworks>net45;net451;net452;net46;net461;net462;net47;net471;net472;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
-       <LangVersion>8</LangVersion>
-        <RepositoryUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo</RepositoryUrl>
-        <PackageTags>Reflection FieldInfo PropertyInfo Core</PackageTags>
-        <RepositoryType>GitHub</RepositoryType>
-        <Authors>Tobias Brohl</Authors>
-        <Company />
-        <PackageProjectUrl>https://theminefighter.github.io/PropertyOrFieldInfo/</PackageProjectUrl>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-       <NullableContextOptions>enable</NullableContextOptions>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.0|AnyCPU'">
-        <DocumentationFile>bin\Release\netcoreapp2.0\PropertyOrFieldInfo.xml</DocumentationFile>
-    </PropertyGroup>
-   <ItemGroup>
-      <PackageReference Include="JetBrains.Annotations" Version="2019.1.1"/>
-   </ItemGroup>
+	<PropertyGroup>
+		<!--PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance-->
+		<Copyright>(c) 2018 by Tobias Brohl</Copyright>
+		<Description>Provides a unified interface for Property and FieldInfos.
+			You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and use all methods you know from Field and Property Infos. Explicit operators are included; IEquatables implemented.
+		</Description>
+		<!--PackageLicenseUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo/blob/master/LICENSE.md</PackageLicenseUrl-->
+		<!--license type="expression">BSD-2-Clause OR MIT</license-->
+		<PackageReleaseNotes>Fixes, End of beta.
+			For Legacy Support please replace "using PropertyOrFieldInfo;" with "using PropertyOrFieldInfoPackage;"
+			This is a beta (without any known issues)
+		</PackageReleaseNotes>
+		<DocumentationFile>bin\release\PropertyOrFieldInfoPackage.xml</DocumentationFile>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Version>1.0.0</Version>
+		<PackageId>PropertyOrFieldInfo</PackageId>
+		<TargetFrameworks>net45;net451;net452;net46;net461;net462;net47;net471;net472;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
+		<LangVersion>8</LangVersion>
+		<RepositoryUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo</RepositoryUrl>
+		<PackageTags>Reflection FieldInfo PropertyInfo Core</PackageTags>
+		<RepositoryType>GitHub</RepositoryType>
+		<Authors>Tobias Brohl</Authors>
+		<Company/>
+		<PackageProjectUrl>https://theminefighter.github.io/PropertyOrFieldInfo/</PackageProjectUrl>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<NullableContextOptions>enable</NullableContextOptions>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netcoreapp2.0|AnyCPU'">
+		<DocumentationFile>bin\Release\netcoreapp2.0\PropertyOrFieldInfo.xml</DocumentationFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="JetBrains.Annotations" Version="2019.1.1"/>
+	</ItemGroup>
 </Project>

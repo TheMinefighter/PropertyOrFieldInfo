@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata minClientVersion="2.12">
+		<id>PropertyOrFieldInfo</id>
+		<version>1.1.0</version>
+		<authors>Tobias Brohl</authors>
+		<owners>Tobias Brohl</owners>
+		<requireLicenseAcceptance>true</requireLicenseAcceptance>
+		<!--<license type="expression">MIT</license>-->
+		<licenseUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo/blob/master/LICENSE.md</licenseUrl>
+		<projectUrl>https://theminefighter.github.io/PropertyOrFieldInfo/</projectUrl>
+		<description>Provides a unified interface for Property and FieldInfos.
+			You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and
+			use all methods you know from Field and Property Infos. Explicit operators are included; IEquatables implemented.
+		</description>
+		<releaseNotes>Mayor fixes and improvements, can cause minor compatibility problems with older version, therefore read the
+			docs
+		</releaseNotes>
+		<copyright>(c) 2018 by Tobias Brohl</copyright>
+		<tags>Reflection FieldInfo PropertyInfo Core</tags>
+		<repository type="git" url="https://github.com/TheMinefighter/PropertyOrFieldInfo"/>
+		<dependencies>
+			<group targetFramework=".NETCoreApp2.2"/>
+			<group targetFramework=".NETCoreApp2.1"/>
+			<group targetFramework=".NETCoreApp2.0"/>
+			<group targetFramework=".NETStandard2.0"/>
+			<group targetFramework=".NETFramework4.7"/>
+			<group targetFramework=".NETFramework4.7.1"/>
+			<group targetFramework=".NETFramework4.7.2"/>
+			<group targetFramework=".NETFramework4.6"/>
+			<group targetFramework=".NETFramework4.6.1"/>
+			<group targetFramework=".NETFramework4.6.2"/>
+			<group targetFramework=".NETFramework4.5"/>
+			<group targetFramework=".NETFramework4.5.1"/>
+			<group targetFramework=".NETFramework4.5.2"/>
+		</dependencies>
+		<frameworkAssemblies>
+			<frameworkAssembly assemblyName="System.Runtime" targetFramework="netcoreapp"/>
+			<frameworkAssembly assemblyName="System.Linq" targetFramework="netcoreapp"/>
+			<frameworkAssembly assemblyName="System.Core" targetFramework="net"/>
+		</frameworkAssemblies>
+	</metadata>
+	<files>
+		<file src="bin\Release\**\*.dll" target="lib"
+				exclude="bin\Release\packages\**\*.*;bin\Release\**\JetBrains.Annotations.dll"/>
+		<file src="bin\Release\**\*.xml" target="lib"
+				exclude="bin\Release\packages\**\*.*;bin\Release\PropertyOrFieldInfoPackage.xml"/>
+	</files>
+</package>
