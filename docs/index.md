@@ -8,6 +8,12 @@ to print all names of Fields and Properties of TestType use:
 For further information about using features of this package visit [this](./CodingDoc.html).
 ## Download
 Download this package in your NuGet Client or [here](https://www.nuget.org/packages/PropertyOrFieldInfo)
+Supported Frameworks:
+ - net45 - net48
+ - netstandard2.0
+ - netcoreapp2.0 - netcoreapp2.2
+
+Starting with version 1.1 C#8 nullability is provided 
 ## License
 This project has been published by Tobias Brohl under [MIT License](https://raw.githubusercontent.com/TheMinefighter/PropertyOrFieldInfo/master/LICENSE.md).
 ## Bug Reports

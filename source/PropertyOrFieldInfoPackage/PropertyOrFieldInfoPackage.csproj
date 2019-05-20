@@ -16,7 +16,7 @@
 		<FileVersion>1.0.0.0</FileVersion>
 		<Version>1.1.0</Version>
 		<PackageId>PropertyOrFieldInfo</PackageId>
-		<TargetFrameworks>net45;net451;net452;net46;net461;net462;net47;net471;net472;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
+		<TargetFrameworks>net48;net45;net451;net452;net46;net461;net462;net47;net471;net472;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
 		<LangVersion>8</LangVersion>
 		<RepositoryUrl>https://github.com/TheMinefighter/PropertyOrFieldInfo</RepositoryUrl>
 		<PackageTags>Reflection FieldInfo PropertyInfo Core</PackageTags>

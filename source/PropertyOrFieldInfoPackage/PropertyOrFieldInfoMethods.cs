@@ -5,7 +5,9 @@ using JetBrains.Annotations;
 namespace PropertyOrFieldInfoPackage {
 public partial class PropertyOrFieldInfo {
 	/// <summary>
+	///  Whether the property/field get be read
 	/// </summary>
+	[PublicAPI]
 	public bool CanRead {
 		get {
 			if (IsField) {
@@ -25,6 +27,7 @@ public partial class PropertyOrFieldInfo {
 	/// <summary>
 	///  Checks whether the value can be written
 	/// </summary>
+	[PublicAPI]
 	public bool CanWrite {
 		get {
 			if (IsField) {
@@ -45,13 +48,7 @@ public partial class PropertyOrFieldInfo {
 	///  Gets the Datatype stored  inside the Field or Property
 	/// </summary>
 	/// <returns> The <see cref="Type" /> stored inside the field or property</returns>
-	[Obsolete("Use " + nameof(ValueType) + " instead"), PublicAPIAttribute]
-	public Type GetValueType => ValueType;
-
-	/// <summary>
-	///  Gets the Datatype stored  inside the Field or Property
-	/// </summary>
-	/// <returns> The <see cref="Type" /> stored inside the field or property</returns>
+	[PublicAPI]
 	public Type ValueType {
 		get {
 			if (IsField) {
@@ -68,7 +65,8 @@ public partial class PropertyOrFieldInfo {
 	/// </summary>
 	/// <param name="toReadFrom">The object to Read the data from, use null if the property or field is static</param>
 	/// <returns>The value of the field or property for the specified object</returns>
-	public object? GetValue(object toReadFrom) {
+	[PublicAPI]
+	public object? GetValue(object? toReadFrom) {
 		if (IsField) {
 			return ((FieldInfo) MemberInfo).GetValue(toReadFrom);
 		}
@@ -82,6 +80,7 @@ public partial class PropertyOrFieldInfo {
 	/// </summary>
 	/// <param name="target">The object to Read the data from, use null if the property or field is static</param>
 	/// <param name="value">The value to set the target to</param>
+	[PublicAPI]
 	public void SetValue(object? target, object? value) {
 		if (IsField) {
 			((FieldInfo) MemberInfo).SetValue(target, value);
@@ -96,7 +95,7 @@ public partial class PropertyOrFieldInfo {
 	/// </summary>
 	/// <returns>True for static false for non static</returns>
 	/// <exception cref="InvalidOperationException">If a property is defined without accessors</exception>
-	[PublicAPIAttribute]
+	[PublicAPI]
 	public bool IsStatic() {
 		if (IsField) {
 			return ((FieldInfo) MemberInfo).IsStatic;

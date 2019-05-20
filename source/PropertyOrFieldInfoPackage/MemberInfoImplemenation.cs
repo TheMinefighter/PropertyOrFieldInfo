@@ -37,5 +37,8 @@ public partial class PropertyOrFieldInfo {
 
 	/// <inheritdoc />
 	public override IList<CustomAttributeData> GetCustomAttributesData() => MemberInfo.GetCustomAttributesData();
+
+	/// <inheritdoc />
+	public override string ToString() => MemberInfo.ToString();
 }
 }

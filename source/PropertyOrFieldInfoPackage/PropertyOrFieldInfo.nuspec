@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata minClientVersion="2.12">
 		<id>PropertyOrFieldInfo</id>
-		<version>1.1.0</version>
+		<version>1.1.1</version>
 		<authors>Tobias Brohl</authors>
 		<owners>Tobias Brohl</owners>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -13,7 +13,9 @@
 			You can use the "DeclaredPropertiesAndFields" Extension for TypeInfos to get an IEnumerable&lt;PropertyOrFieldInfo&gt;and
 			use all methods you know from Field and Property Infos. Explicit operators are included; IEquatables implemented.
 		</description>
-		<releaseNotes>Mayor fixes and improvements, can cause minor compatibility problems with older version, therefore read the
+		<releaseNotes>
+			Mayor fixes and improvements, C#8 support, massively increased framework support, can cause minor compatibility problems
+			with older version (1.0.1-), therefore read the
 			docs
 		</releaseNotes>
 		<copyright>(c) 2018 by Tobias Brohl</copyright>
@@ -24,6 +26,7 @@
 			<group targetFramework=".NETCoreApp2.1"/>
 			<group targetFramework=".NETCoreApp2.0"/>
 			<group targetFramework=".NETStandard2.0"/>
+			<group targetFramework=".NETFramework4.8"/>
 			<group targetFramework=".NETFramework4.7"/>
 			<group targetFramework=".NETFramework4.7.1"/>
 			<group targetFramework=".NETFramework4.7.2"/>
@@ -45,5 +48,7 @@
 				exclude="bin\Release\packages\**\*.*;bin\Release\**\JetBrains.Annotations.dll"/>
 		<file src="bin\Release\**\*.xml" target="lib"
 				exclude="bin\Release\packages\**\*.*;bin\Release\PropertyOrFieldInfoPackage.xml"/>
+		<file src="bin\Release\**\*.pdb" target="lib"
+				exclude="bin\Release\packages\**\*.*"/>
 	</files>
 </package>

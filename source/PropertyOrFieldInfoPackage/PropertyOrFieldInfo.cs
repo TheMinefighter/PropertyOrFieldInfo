@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using JetBrains.Annotations;
 
 namespace PropertyOrFieldInfoPackage {
 /// <summary>
@@ -10,16 +11,19 @@ public partial class PropertyOrFieldInfo : MemberInfo, IEquatable<PropertyOrFiel
 	/// <summary>
 	///  True if it is a <see cref="FieldInfo" />, otherwise false
 	/// </summary>
+	[PublicAPI]
 	public bool IsField { get; }
 
 	/// <summary>
 	///  True if it is a <see cref="PropertyInfo" />, otherwise false
 	/// </summary>
+	[PublicAPI]
 	public bool IsProperty => !IsField;
 
 	/// <summary>
 	///  The actual <see cref="System.Reflection.MemberInfo" />
 	/// </summary>
+	[PublicAPI]
 	public MemberInfo MemberInfo { get; }
 
 	/// <inheritdoc />
@@ -29,6 +33,7 @@ public partial class PropertyOrFieldInfo : MemberInfo, IEquatable<PropertyOrFiel
 	/// </summary>
 	/// <param name="other">The <see cref="T:System.Reflection.FieldInfo" /> to compare with</param>
 	/// <returns>Whether both are equal</returns>
+	[PublicAPI]
 	public bool Equals(FieldInfo other) => MemberInfo.Equals(other);
 
 	/// <inheritdoc />
@@ -38,6 +43,7 @@ public partial class PropertyOrFieldInfo : MemberInfo, IEquatable<PropertyOrFiel
 	/// </summary>
 	/// <param name="other">The <see cref="T:System.Reflection.PropertyInfo" /> to compare with</param>
 	/// <returns>Whether both are equal</returns>
+	[PublicAPI]
 	public bool Equals(PropertyInfo other) => MemberInfo.Equals(other);
 
 	/// <inheritdoc />
@@ -46,6 +52,7 @@ public partial class PropertyOrFieldInfo : MemberInfo, IEquatable<PropertyOrFiel
 	/// </summary>
 	/// <param name="other">The <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> to compare with</param>
 	/// <returns>Whether both are equal</returns>
+	[PublicAPI]
 	public bool Equals(PropertyOrFieldInfo other) => MemberInfo.Equals(other.MemberInfo);
 
 	/// <summary>
@@ -53,9 +60,7 @@ public partial class PropertyOrFieldInfo : MemberInfo, IEquatable<PropertyOrFiel
 	/// </summary>
 	/// <param name="other">The <see cref="T:PropertyOrFieldInfoPackage.PropertyOrFieldInfo" /> to compare with</param>
 	/// <returns>Whether both are equal</returns>
+	[PublicAPI]
 	public bool EqualsMemberInfo(MemberInfo other) => MemberInfo.Equals(other);
-
-	/// <inheritdoc />
-	public override string ToString() => MemberInfo.ToString();
 }
 }

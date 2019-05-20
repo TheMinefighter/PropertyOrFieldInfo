@@ -1,7 +1,7 @@
 # How to use
 to print all names of Fields and Properties of TestType use:
 
-    foreach (FieldOrProperyInfo info in typeof(TestType).GetTypeInfo().DeclaredPropertiesAndFields()) {
+    foreach (FieldOrProperyInfo info in typeof(TestType).GetTypeInfo().GetPropertiesAndFields()) {
     	Console.WriteLine(info.Name);
     }
 For more extensive documentation visit https://theminefighter.github.io/PropertyOrFieldInfo/CodingDoc.html
