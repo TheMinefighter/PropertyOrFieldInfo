@@ -12,9 +12,9 @@
 			This is a beta (without any known issues)
 		</PackageReleaseNotes>
 		<DocumentationFile>bin\release\PropertyOrFieldInfoPackage.xml</DocumentationFile>
-		<AssemblyVersion>1.1.0.0</AssemblyVersion>
+		<AssemblyVersion>1.1.1.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
-		<Version>1.1.0</Version>
+		<Version>1.1.1</Version>
 		<PackageId>PropertyOrFieldInfo</PackageId>
 		<TargetFrameworks>net48;net45;net451;net452;net46;net461;net462;net47;net471;net472;netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2</TargetFrameworks>
 		<LangVersion>8</LangVersion>
